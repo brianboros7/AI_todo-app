@@ -1,24 +1,142 @@
 .App {
-  text-align: center;
+  display: block;
+  min-height: 100vh;
 }
-
-
-
-
 
 .App-header {
   background-color: #282c34;
-  min-height: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
   color: white;
+  text-align: center;
+  min-height: 40px; 
+}
+
+.App-header p {
+  display: block; 
+  padding: 10px; 
 }
 
 body {
-  min-height: 100vh; 
-  background-color: #2859bb;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
 }
 
+/* Left pane - Navigation */
+.left-pane {
+  width: 200px;
+  background-color: #1a237e;
+  color: white;
+  padding: 1rem;
+}
+
+/* Middle pane - Tasks */
+.middle-pane {
+  flex-grow: 1;
+  padding: 1rem;
+  background-color: white;
+}
+
+/* Right pane */
+.right-pane {
+  width: 250px;
+  background-color: #e8eaf6;
+  padding: 1rem;
+}
+
+/* ... existing code ... */ 
+
+.dashboard {
+  display: flex;
+  flex-direction: row; /* Ensure horizontal layout of columns */
+  min-height: calc(100vh - 50px); /* Subtract header height */
+}
+
+.navigation-column {
+  width: 12%;
+  background-color: #f0f2f5;
+  padding: 1rem;
+  border-right: 1px solid #e0e0e0; /* Add a separator */
+  display: flex;
+  flex-direction: column; /* Vertical layout within the column */
+}
+
+.tasks-column {
+  width: 88%;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; /* Vertical layout within the column */
+}
+
+.navigation-column nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation-column nav ul li {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* ... rest of the existing code ... */
+
+.task-list {
+    margin-top: 1rem;
+}
+
+.task-list form, .task-item form {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.task-list input, .task-item input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.task-list button, .task-item button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.task-item {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task-item h3 {
+    margin-top: 0;
+}
+
+.task-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item li {
+    margin-bottom: 0.5rem;
+}
+
+.task-item li input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ... rest of the existing code ... */
